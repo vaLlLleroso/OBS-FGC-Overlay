@@ -43,7 +43,7 @@ overlay/
 ## Features
 
 - **Live updates**: Names, scores, round info update instantly
-- **Simple backend**: No database—`data.json` handles state
+- **Simple backend**: No database cos `data.json` handles state
 - **Transparent overlay**: Looks clean in-stream
 - **No clutter**: Everything in `/public`, just HTML/CSS/JS
 
