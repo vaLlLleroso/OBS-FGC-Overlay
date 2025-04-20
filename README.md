@@ -11,6 +11,7 @@ A barebones as hell, browser-based overlay for fighting game tournaments. Design
 - Defaults as semi-transparent but nonetheless, OBS-friendly visuals
 
 ## Project Structure
+```
 overlay/ 
 ├── node_modules/| You can ignore this
 ├── public/ 
@@ -22,6 +23,7 @@ overlay/
 ├── package.json 
 ├── package-lock.json 
 └── server.js    | Express server entry point
+```
 
 ## Run the damn thing
 1. **Install dependencies** (Express):
