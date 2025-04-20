@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Panel</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #111; color: #fff; }
+    input, button { margin: 5px 0; padding: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Overlay Control Panel</h2>
+
+  <div>
+    <label>Player 1 Name: <input id="p1-name" /></label><br>
+    <label>Player 1 Score: <input id="p1-score" type="number" /></label><br>
+  </div>
+
+  <div>
+    <label>Player 2 Name: <input id="p2-name" /></label><br>
+    <label>Player 2 Score: <input id="p2-score" type="number" /></label><br>
+  </div>
+
+  <div>
+    <label>Round Info: <input id="round-info" /></label><br>
+  </div>
+
+  <button onclick="sendData()">Update Overlay</button>
+
+  <script>
+async function sendData() {
+  const payload = {
+    player1: {
+      name: document.getElementById("p1-name").value,
+      score: Number(document.getElementById("p1-score").value),
+      character: document.getElementById("p1-char").value
+    },
+    player2: {
+      name: document.getElementById("p2-name").value,
+      score: Number(document.getElementById("p2-score").value),
+      character: document.getElementById("p2-char").value
+    },
+    round: document.getElementById("round-info").value
+  };
+
+  const response = await fetch("/update", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+
+  if (response.ok) {
+    alert("Overlay updated!");
+  } else {
+    alert("Error updating overlay!");
+  }
+}
+  </script>
+</body>
+</html>
