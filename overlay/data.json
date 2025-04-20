@@ -1,12 +1,12 @@
 {
     "player1": {
-      "name": "waifusouls",
+      "name": "Player 1",
       "score": 0
     },
     "player2": {
-      "name": "MediocreTactician",
+      "name": "Player 2",
       "score": 1
     },
-    "round": "Elimination"
+    "round": "Group Stage"
   }
   
