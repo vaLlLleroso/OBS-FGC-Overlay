@@ -7,8 +7,8 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 let overlayData = {
-  player1: { name: 'Player 1', score: 0, character: 'Character 1' },
-  player2: { name: 'Player 2', score: 0, character: 'Character 2' },
+  player1: { name: 'Player 1', score: 0, team: ''},
+  player2: { name: 'Player 2', score: 0, team: ''},
   round: 'Round 1',
 };
 

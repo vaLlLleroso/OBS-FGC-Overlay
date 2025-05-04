@@ -14,9 +14,11 @@
     // Update the overlay elements
     document.getElementById('p1-name').innerText = data.player1.name;
     document.getElementById('p1-score').innerText = data.player1.score;
+    document.getElementById('p1-team').innerText = data.player1.team;
 
     document.getElementById('p2-name').innerText = data.player2.name;
     document.getElementById('p2-score').innerText = data.player2.score;
+    document.getElementById('p2-team').innerText = data.player2.team;
 
     document.getElementById('round-info').innerText = data.round;
   } else {
@@ -30,7 +32,10 @@ setInterval(updateOverlay, 1000);  // Update every second (adjust as needed)</sc
 <div class="overlay">
   <div class="player" id="player1">
     <div class="player-row">
-      <h2 id="p1-name">Player 1</h2>
+      <div class="name-block">
+        <h2 id="p1-team">Team</h2>
+        <h2 id="p1-name">Player 1</h2>
+      </div>
       <p id="p1-score">0</p>
     </div>
   </div>
@@ -40,7 +45,11 @@ setInterval(updateOverlay, 1000);  // Update every second (adjust as needed)</sc
   <div class="player" id="player2">
     <div class="player-row">
       <p id="p2-score">0</p>
-      <h2 id="p2-name">Player 2</h2>
+      <div class="name-block">
+        <h2 id="p2-team">Team</h2>
+        <h2 id="p2-name">Player 2</h2>
+      </div>
+      
     </div>
   </div>
 </div>

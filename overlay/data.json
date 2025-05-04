@@ -1,9 +1,11 @@
 {
     "player1": {
+      "team":"Team",
       "name": "Player 1",
       "score": 0
     },
     "player2": {
+      "team":"Team",
       "name": "Player 2",
       "score": 1
     },

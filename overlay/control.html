@@ -10,20 +10,25 @@
   </style>
 </head>
 <body>
-  <h2>Overlay Control Panel</h2>
+  <h1>Overlay Control Panel</h1>
 
   <div>
-    <label>Player 1 Name: <input id="p1-name" /></label><br>
-    <label>Player 1 Score: <input id="p1-score" type="number" /></label><br>
+    <h2>Player 1</h2>
+    <label>Name: <input id="p1-name" /></label><br>
+    <label>Score: <input id="p1-score" type="number" /></label><br>
+    <label>Team: <input id="p1-team" /></label><br><br><br>
   </div>
 
   <div>
-    <label>Player 2 Name: <input id="p2-name" /></label><br>
-    <label>Player 2 Score: <input id="p2-score" type="number" /></label><br>
+    <h2>Player 2</h2>
+    <label>Name: <input id="p2-name" /></label><br>
+    <label>Score: <input id="p2-score" type="number" /></label><br>
+    <label>Team: <input id="p2-team" /></label><br><br><br>
   </div>
 
   <div>
-    <label>Round Info: <input id="round-info" /></label><br>
+    <h2>Current Set</h2>
+    <label>Set Info: <input id="round-info" /></label><br>
   </div>
 
   <button onclick="sendData()">Update Overlay</button>
@@ -34,12 +39,12 @@ async function sendData() {
     player1: {
       name: document.getElementById("p1-name").value,
       score: Number(document.getElementById("p1-score").value),
-      character: document.getElementById("p1-char").value
+      team: document.getElementById("p1-team").value
     },
     player2: {
       name: document.getElementById("p2-name").value,
       score: Number(document.getElementById("p2-score").value),
-      character: document.getElementById("p2-char").value
+      team: document.getElementById("p2-team").value
     },
     round: document.getElementById("round-info").value
   };
